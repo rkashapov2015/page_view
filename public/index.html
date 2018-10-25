@@ -9,23 +9,35 @@
     <body>
         <div class="container">
             <div class="row">
-                <div id="itemsContainer">
-                    <table class="table">
-                        <thead>
-                            <th>Link</th>
-                            <th>Type</th>
-                        </thead>
-                        <tbody>
-                            <template v-for="item in items">
-                                <tr>
-                                    <td><a v-bind:href="item.pageUrl" class="btn btn-link">{{ item.name }}</a></td>
-                                    
-                                    <td v-if="item.type === 'movie'">{{ item.category }}</td>
-                                    <td v-if="item.type === 'music'">{{ item.genre }}</td>
-                                </tr>
-                            </template>
-                        </tbody>
-                    </table>
+                <div id="itemsContainer" style="display:none;">
+                    <div  v-if="error == false">
+                        <table class="table">
+                            <thead>
+                                <th>Link</th>
+                                <th>Category/Genre</th>
+                            </thead>
+                            <tbody>
+                                <template v-for="item in items">
+                                    <tr>
+                                        <td><a v-bind:href="item.pageUrl" class="btn btn-link">{{ item.name }}</a></td>
+                                        <td v-if="item.type === 'movie'">{{ item.category }}</td>
+                                        <td v-if="item.type === 'music'">{{ item.genre }}</td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                        <div class="col-xs-12 text-center">
+                            <ul class="pagination">
+                                <template v-for="page in pages">
+                                        
+                                        <li><a v-bind:href="'/?page=' + page">{{page}}</a></li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                    <div v-if="error == true" class="jumbotron">
+                        <p class="text-center">Произошла ошибка</p>
+                    </div>
                 </div>
             </div>
         </div>

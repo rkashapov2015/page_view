@@ -1,0 +1,15 @@
+{
+    "page": 2,
+    "lastPage": 3,
+    "content": [
+        {"id": "10", "type": "movie", "category": "трейлер", "pageUrl": "/movie/9", "name": "Гофманиада"},
+        {"id": "11", "type": "movie", "category": "трейлер", "pageUrl": "/movie/10", "name": "Придержи тьму"},
+        {"id": "12", "type": "movie", "category": "трейлер", "pageUrl": "/movie/11", "name": "Смолфут"},
+        {"id": "13", "type": "movie", "category": "трейлер", "pageUrl": "/movie/12", "name": "Хэллоуин"},
+        {"id": "14", "type": "movie", "category": "трейлер", "pageUrl": "/movie/13", "name": "Человек на Луне"},
+        {"id": "15", "type": "movie", "category": "трейлер", "pageUrl": "/movie/14", "name": "Мэнди"},
+        {"id": "16", "type": "movie", "category": "трейлер", "pageUrl": "/movie/15", "name": "Веном"},
+        {"id": "17", "type": "movie", "category": "трейлер", "pageUrl": "/movie/16", "name": "Сердце мира"},
+        {"id": "18", "type": "music", "genre": "rock", "pageUrl": "/music/14", "name": "Tool The Pot"}
+    ]
+}
