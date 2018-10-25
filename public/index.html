@@ -13,11 +13,11 @@
                     <div  v-if="error == false">
                         <table class="table">
                             <thead>
-                                <th>Link</th>
+                                <th>Link <input v-model="search"></th>
                                 <th>Category/Genre</th>
                             </thead>
                             <tbody>
-                                <template v-for="item in items">
+                                <template v-for="item in filtered">
                                     <tr>
                                         <td><a v-bind:href="item.pageUrl" class="btn btn-link">{{ item.name }}</a></td>
                                         <td v-if="item.type === 'movie'">{{ item.category }}</td>
@@ -29,8 +29,7 @@
                         <div class="col-xs-12 text-center">
                             <ul class="pagination">
                                 <template v-for="page in pages">
-                                        
-                                        <li><a v-bind:href="'/?page=' + page">{{page}}</a></li>
+                                    <li><a v-bind:href="'/?page=' + page">{{page}}</a></li>
                                 </template>
                             </ul>
                         </div>

@@ -28,7 +28,16 @@ var app = null;
             data: {
                 items: [],
                 error: false,
-                pages: []
+                pages: [],
+                search: ''
+            },
+            computed: {
+                filtered: function () {
+                    var thiss = this;
+                    return this.items.filter(function (item) {
+                        return item.name.toLowerCase().indexOf(thiss.search) > -1;
+                    });
+                }
             }
         });
 
